@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header with Logo and Profile -->
+    <header>
+        <div class="header-content">
+            <div class="top-bar">
+            <div class="logo">
+                <img src="images/10027358.png" alt="Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a song...">
+            </div>
+            <div class="profile">
+                <span class="username">ทีมงานกำจัดปลวก</span>
+                <img src="images/playut.jpg" alt="Profile Picture" class="profile-pic">
+               
+            </div>
+            <div class="music-player">
+              
+                </div>
+                <div class="player-controls" id="playerControls">
+                    <h3 id="playerTitle">Select a song to play</h3>
+                    <audio id="audioPlayer" controls>
+                        <source id="audioSource" src="" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
+                </div>
+        </div>
+    </header>
+    <!-- Song Selection Section -->
+    <section class="album-selection">
+        <h2>ฟังแล้วปวดหัว</h2>
+
+        <div class="album-container">
+                    <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/กระดังงาเกรียมไฟ.mp3', 'ab67616d0000b2734e02a236a7abad4d69ebe0c4.jpg', 'กระดังงาเกรียมไฟ')">
+            <img src="images/ab67616d0000b2734e02a236a7abad4d69ebe0c4.jpg" alt="Album Cover">
+            <p>กระดังงาเกรียมไฟ</p>
+            <p>ไววิทย์</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('songs/สาริกาลิ้นทอง - Paper Planes x โจอี้ ภูวศิษฐ์ (genie 100x100) .mp3', 'album1.jpg', 'สาริกาลิ้นทอง')">
+            <img src="images/Paper Planes.jpg" alt="Album Cover">
+            <p>สาริกาลิ้นทอง</p>
+            <p>Paper Planes x โจอี้ ภูวศิษฐ์</p>
+        </div>
+                   <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/นิดหน่อย - โจอี้ ภูวศิษฐ์ (JOEY PHUWASIT) .mp3', 'album1.jpg', 'นิดหน่อย')">
+            <img src="images/hq720.jpg" alt="Album Cover">
+            <p>นิดหน่อย</p>
+            <p>โจอี้ ภูวศิษฐ์</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('songs/สิให้เว้าอีหยัง - ก้านตอง ทุ่งเงิน【Cover Version.mp3', 'album1.jpg', 'สิให้เว้าอีหยัง Cover Version')">
+            <img src="images/channels4_profile.jpg" alt="Album Cover">
+            <p>สิให้เว้าอีหยัง Cover Version</p>
+            <p>ก้านตอง ทุ่งเงิน</p>
+        </div>
+                    <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/Medley รวมมิตรเพลงช้า PALMY - ศิลปิน โจอี้ ภูวศิษฐ์, Instinct, เล็ก พงษธร, .mp3', 'album1.jpg', 'รวมมิตรเพลงช้า PALMY')">
+            <img src="images/maxresdefault.jpg" alt="Album Cover">
+            <p>รวมมิตรเพลงช้า PALMY</p>
+            <p> โจอี้ ภูวศิษฐ์, Instinct, เล็ก พงษธร, Uefa Hari</p>
+        </div>
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/จื่อบ่ (ຈື່ບໍ່) - ก้านตอง ทุ่งเงิน.mp3', 'album1.jpg', 'จื่อบ่ (ຈື່ບໍ່)')">
+                        <img src="images/channels4_profile.jpg" alt="Album Cover">
+                        <p>จื่อบ่ (ຈື່ບໍ່)</p>
+                        <p>ก้านตอง ทุ่งเงิน</p>
+                    </div>
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/Medley เพลงรัก bodyslam.mp3', 'album1.jpg', 'Medley เพลงรัก bodyslam')">
+            <img src="images/maxresdefault (1).jpg" alt="Album Cover">
+            <p>Medley เพลงรัก bodyslam</p>
+            <p> Big Ass, Paper Planes, Yes’Sir Days, Bomb at Track</p>
+        </div>
+
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/Die with a smile.mp3', 'album1.jpg', 'Die with a smile')">
+                        <img src="images/artworks-owDaTrKOBlmc-0-t500x500.jpg" alt="Album Cover">
+                        <p>Die with a smile</p>
+                        <p>Lady Gaga, Bruno Mars</p>
+                    </div>
+
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/One Direction - Perfect .mp3', 'album1.jpg', 'Perfect')">
+            <img src="images/One Direction.jpg" alt="Album Cover">
+            <p>Perfect</p>
+            <p>One Direction</p>
+        </div>
+
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/อัปสราหลงฟ้า-เนส พรอำนาจ COVER VERSION.mp3', 'album1.jpg', 'อัปสราหลงฟ้า COVER VERSION')">
+                        <img src="images/channels4_profile (1).jpg" alt="Album Cover">
+                        <p>อัปสราหลงฟ้า COVER VERSION</p>
+                        <p>เนส พรอำนาจ</p>
+                    </div>
+                
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/พูดไม่ได้ - POTATO「Official MV」.mp3', 'album1.jpg', 'พูดไม่ได้')">
+            <img src="images/ab67616d0000b2734b4142481ff995e96bce6519.jpg" alt="Album Cover">
+            <p>พูดไม่ได้</p>
+            <p>POTATO</p>
+        </div>
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/อยาพดเลย - MUSKETEERS (Duck Rewinds Project) [Live Session].mp3', 'album1.jpg', 'อย่าพูดเลย')">
+                        <img src="images/channels4_profile (2).jpg" alt="Album Cover">
+                        <p>อย่าพูดเลย</p>
+                        <p>MUSKETEERS</p>
+                    </div>
+
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/กาลครั้งหนึ่ง - ปรางปรางทิพย์.mp3', 'album1.jpg', 'กาลครั้งหนึ่ง')">
+            <img src="images/S__221290510.jpg" alt="Album Cover">
+            <p>กาลครั้งหนึ่ง</p>
+            <p>ปรางปรางทิพย์</p>
+        </div>
+  
+                                     <!-- เพลงจากเครื่อง -->
+                                     <div class="album-card" onclick="playSong('songs/034 พี่ชอบหนูที่สุดเลย - PONCHET, VARINZ.mp3', 'album1.jpg', 'พี่ชอบหนูที่สุดเลย')">
+                                        <img src="images/ab67616d0000b273c4ef9bcc66527ca4a1055b73.jpg" alt="Album Cover">
+                                        <p>พี่ชอบหนูที่สุดเลย</p>
+                                        <p>PONCHET, VARINZ</p>
+                                    </div>
+          
+                                                 <!-- เพลงจากเครื่อง -->
+                                                 <div class="album-card" onclick="playSong('songs/ภวังค์จิต - ปราง ปรางทิพย์.mp3', 'album1.jpg', 'ภวังค์จิต')">
+                                                    <img src="images/S__221290510.jpg" alt="Album Cover">
+                                                    <p>ภวังค์จิต</p>
+                                                    <p>ปราง ปรางทิพย์</p>
+                                                </div>
+              
+                                                             <!-- เพลงจากเครื่อง -->
+                                    <div class="album-card" onclick="playSong('songs/นะหน้าทอง phuuwsisth-joey-phuwasit-.mp3', 'album1.jpg', 'นะหน้าทอง')">
+                                        <img src="images/hq720 (1).jpg" alt="Album Cover">
+                                        <p>นะหน้าทอง</p>
+                                        <p>โจอี้ ภูวศิษฐ์</p>
+                                    </div>
+                        
+                                                                     <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/ขยี้ใจ.mp3', 'album1.jpg', 'สวยขยี้ใจ ')">
+            <img src="images/ขยี้ใจ6803.jpg" alt="Album Cover">
+            <p>สวยขยี้ใจ </p>
+            <p>บ่าวบุ๊ค x ทิดแอม x คำมอส </p>
+        </div>
+
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/วัยแสวง .mp3', 'album1.jpg', 'วัยแสวง ')">
+                        <img src="images/{C6A13C43-40A3-4AEE-A8C1-C4CEC977FAF8}.png" alt="Album Cover">
+                        <p>วัยแสวง </p>
+                        <p> คุณตั๊ก </p>
+                    </div>
+
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/ตำนานป่าอาถรรพ์  คุณอาร์ต เชียงราย คืนเผาผี Ghost .mp3', 'album1.jpg', 'ตำนานป่าอาถรรพ์')">
+            <img src="images/{D7CB3060-92F6-41D2-A766-4466462798CE}.png" alt="Album Cover">
+            <p>ตำนานป่าอาถรรพ์</p>
+            <p>คุณอาร์ต เชียงราย </p>
+        </div>
+
+                                         <!-- เพลงจากเครื่อง -->
+                                         <div class="album-card" onclick="playSong('songs/เรื่องเล่าตอนเข้าป่า • คุณหนุ่ม - 19 ต.ค. 67 - THE GHOST RADIO.mp3', 'album1.jpg', 'เรื่องเล่าตอนเข้าป่า ')">
+                                            <img src="images/{F9F5A0B9-FD9C-4777-9E7E-CF7CFF0A756F}.png" alt="Album Cover">
+                                            <p>เรื่องเล่าตอนเข้าป่า</p>
+                                            <p> คุณหนุ่ม</p>
+                                        </div>
+   
+                                                     <!-- เพลงจากเครื่อง -->
+                                                     <div class="album-card" onclick="playSong('songs/กระสอบ • คุณอาร์ต - เรื่องผีหลอน - 14 พ.ย. 2563 - THE GHOST RADIO.mp3', 'album1.jpg', 'กระสอบ')">
+                                                        <img src="images/{380F81D1-58F8-43B0-A25C-BFA18305333C}.png" alt="Album Cover">
+                                                        <p>กระสอบ</p>
+                                                        <p>คุณอาร์ต |</p>
+                                                    </div>
+
+                                                                         <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/ตอก • ครูตรี - 30 ก.ย. 66 - THE GHOST RADIO.mp3', 'album1.jpg', 'ตอก ')">
+            <img src="images/{F12033C5-E83C-4F5E-8FB5-7B4E174E93E8}.png" alt="Album Cover">
+            <p>ตอก </p>
+            <p>ครูตรี </p>
+        </div>
+
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/เรื่องเล่าของคนบ้า • คุณอาร์ต กระสอบ - 3 ส.ค. 67 - THE GHOST RADIO.mp3', 'album1.jpg', 'เรื่องเล่าของคนบ้า')">
+                        <img src="images/{69A95085-E97C-42B1-836C-D28D2FC2EC29}.png" alt="Album Cover">
+                        <p>เรื่องเล่าของคนบ้า</p>
+                        <p>คุณอาร์ต</p>
+                    </div>
+                    
+                    <!-- เพลงจาก Google Drive -->
+                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                        <img src="album2.jpg" alt="Album Cover">
+                        <p>Song 2 - Artist 2</p>
+                    </div>
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                                         <!-- เพลงจากเครื่อง -->
+                                         <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                     <!-- เพลงจากเครื่อง -->
+                                                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                                        <img src="album1.jpg" alt="Album Cover">
+                                                        <p>Song 1 - Artist 1</p>
+                                                    </div>
+                                                    
+                                                    <!-- เพลงจาก Google Drive -->
+                                                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                                        <img src="album2.jpg" alt="Album Cover">
+                                                        <p>Song 2 - Artist 2</p>
+                                                    </div>
+                                                                 <!-- เพลงจากเครื่อง -->
+                                        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                                         <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                        <img src="album1.jpg" alt="Album Cover">
+                        <p>Song 1 - Artist 1</p>
+                    </div>
+                    
+                    <!-- เพลงจาก Google Drive -->
+                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                        <img src="album2.jpg" alt="Album Cover">
+                        <p>Song 2 - Artist 2</p>
+                    </div>
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                                         <!-- เพลงจากเครื่อง -->
+                                         <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                     <!-- เพลงจากเครื่อง -->
+                                                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                                        <img src="album1.jpg" alt="Album Cover">
+                                                        <p>Song 1 - Artist 1</p>
+                                                    </div>
+                                                    
+                                                    <!-- เพลงจาก Google Drive -->
+                                                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                                        <img src="album2.jpg" alt="Album Cover">
+                                                        <p>Song 2 - Artist 2</p>
+                                                    </div>
+                                                                 <!-- เพลงจากเครื่อง -->
+                                        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                                         <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                        <img src="album1.jpg" alt="Album Cover">
+                        <p>Song 1 - Artist 1</p>
+                    </div>
+                    
+                    <!-- เพลงจาก Google Drive -->
+                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                        <img src="album2.jpg" alt="Album Cover">
+                        <p>Song 2 - Artist 2</p>
+                    </div>
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                                         <!-- เพลงจากเครื่อง -->
+                                         <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                     <!-- เพลงจากเครื่อง -->
+                                                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                                        <img src="album1.jpg" alt="Album Cover">
+                                                        <p>Song 1 - Artist 1</p>
+                                                    </div>
+                                                    
+                                                    <!-- เพลงจาก Google Drive -->
+                                                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                                        <img src="album2.jpg" alt="Album Cover">
+                                                        <p>Song 2 - Artist 2</p>
+                                                    </div>
+                                                                 <!-- เพลงจากเครื่อง -->
+                                        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                                         <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                        <img src="album1.jpg" alt="Album Cover">
+                        <p>Song 1 - Artist 1</p>
+                    </div>
+                    
+                    <!-- เพลงจาก Google Drive -->
+                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                        <img src="album2.jpg" alt="Album Cover">
+                        <p>Song 2 - Artist 2</p>
+                    </div>
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                                         <!-- เพลงจากเครื่อง -->
+                                         <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                     <!-- เพลงจากเครื่อง -->
+                                                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                                        <img src="album1.jpg" alt="Album Cover">
+                                                        <p>Song 1 - Artist 1</p>
+                                                    </div>
+                                                    
+                                                    <!-- เพลงจาก Google Drive -->
+                                                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                                        <img src="album2.jpg" alt="Album Cover">
+                                                        <p>Song 2 - Artist 2</p>
+                                                    </div>
+                                                                 <!-- เพลงจากเครื่อง -->
+                                        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                                         <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                        <img src="album1.jpg" alt="Album Cover">
+                        <p>Song 1 - Artist 1</p>
+                    </div>
+                    
+                    <!-- เพลงจาก Google Drive -->
+                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                        <img src="album2.jpg" alt="Album Cover">
+                        <p>Song 2 - Artist 2</p>
+                    </div>
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                                         <!-- เพลงจากเครื่อง -->
+                                         <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                     <!-- เพลงจากเครื่อง -->
+                                                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                                        <img src="album1.jpg" alt="Album Cover">
+                                                        <p>Song 1 - Artist 1</p>
+                                                    </div>
+                                                    
+                                                    <!-- เพลงจาก Google Drive -->
+                                                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                                        <img src="album2.jpg" alt="Album Cover">
+                                                        <p>Song 2 - Artist 2</p>
+                                                    </div>
+                                                                 <!-- เพลงจากเครื่อง -->
+                                        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                                            <img src="album1.jpg" alt="Album Cover">
+                                            <p>Song 1 - Artist 1</p>
+                                        </div>
+                                        
+                                        <!-- เพลงจาก Google Drive -->
+                                        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                                            <img src="album2.jpg" alt="Album Cover">
+                                            <p>Song 2 - Artist 2</p>
+                                        </div>
+                                                                         <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+                     <!-- เพลงจากเครื่อง -->
+                     <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+                        <img src="album1.jpg" alt="Album Cover">
+                        <p>Song 1 - Artist 1</p>
+                    </div>
+                    
+                    <!-- เพลงจาก Google Drive -->
+                    <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+                        <img src="album2.jpg" alt="Album Cover">
+                        <p>Song 2 - Artist 2</p>
+                    </div>
+                                 <!-- เพลงจากเครื่อง -->
+        <div class="album-card" onclick="playSong('songs/song1.mp3', 'album1.jpg', 'Song 1 - Artist 1')">
+            <img src="album1.jpg" alt="Album Cover">
+            <p>Song 1 - Artist 1</p>
+        </div>
+        
+        <!-- เพลงจาก Google Drive -->
+        <div class="album-card" onclick="playSong('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2', 'album2.jpg', 'Song 2 - Artist 2')">
+            <img src="album2.jpg" alt="Album Cover">
+            <p>Song 2 - Artist 2</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>🪳อัพตามอารมณ์</p>
+    </footer>
+        <div class="progress-bar">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progress" value="0" max="100">
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+    
+    <audio id="audioPlayer" class="audio-element">
+        <source id="audioSource" src="" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+
+    <script>
+        function playSong(song, albumCover, songTitle) {
+            var audioPlayer = document.getElementById('audioPlayer');
+            var audioSource = document.getElementById('audioSource');
+            var playerContainer = document.querySelector('.player-controls');
+            var playerTitle = document.getElementById('playerTitle');
+
+            // Change song
+            audioSource.src = song;
+            audioPlayer.load();
+            audioPlayer.play();
+
+            // Update album cover and title
+            playerContainer.style.backgroundImage = `url('${albumCover}')`;
+            playerTitle.textContent = songTitle;
+        }
+    </script>
+
+</body>
+</html>
